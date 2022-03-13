@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de perdas financeiras</title>
+</head>
+
+<body>
+    <b>Calculadora de perdas financeiras</b> <br>
+    <span>As empresas grandes que armazenam dados em datas centers tem um prejuizo de nove mil dólares por minuto de
+    inatividade. </span> <br>
+    <span>Com o nosso sistema buscamos evitar a inatividade dos servidores. </span> <br><br>
+    <span>Coloque os minutos de inatividade e simule a perda de dinheiro que sua empresa pode ter de acordo com o tamanho dela: </span> <br> <br>
+    <input style="background-color: silver;" id="minutos" type="text" placeholder="insira os minutos:"><br><br>
+    <button style="background-color: aqua; 
+    color: black;" onclick="grande()">Empresa Grande</button>
+    <button style="background-color: aqua;color: black;" onclick="media()">Empresa Média</button> <br>
+    <span id="resultado"></span>
+
+</body>
+
+</html>
+<script>
+    function grande() {
+        resultado.innerHTML = 'O dinheiro perdido será de $' + (minutos.value * 9000) + ' dólares'
+
+    }
+    function media() {
+        resultado.innerHTML = 'O dinheiro perdido será de $' + (minutos.value * 5600) + ' dólares'
+    }
+
+</script>
