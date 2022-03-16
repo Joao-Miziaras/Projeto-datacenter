@@ -5,7 +5,7 @@ create table Cliente (idCliente int primary key auto_increment,
                             Email varchar (60), 
                             CNPJ varchar(14), 
                             Número_Contato char(11), 
-                            DataCenter int);
+                            idDataCenter int);
 
 create table DataCenter (idDataCenter int primary key auto_increment, 
 						Descrição varchar(100),
@@ -26,4 +26,8 @@ select * from cliente;
 select * from datacenter;
 select idCliente, nome from cliente;
 select iddatacenter from datacenter;
-
+update Cliente set Nome= 'microfet' where idCliente= 8;
+alter table DataCenter modify Umidade varchar(40);
+select * from Cliente order by Temperatura desc;
+alter table DataCenter drop Tamanho;
+alter table Cliente change Localidade Localização varchar(50);
